@@ -96,7 +96,7 @@ select#dia {
 }
 
 /* Cada bloco de horário */
-.horario {
+.horario, .botao-reservar {
   background-color: #dff9fb;
   border: 2px solid #22a6b3;
   padding: 10px 16px;
@@ -111,7 +111,7 @@ select#dia {
   text-align: center;
 }
 
-.horario:hover {
+.horario:hover, .botao-reservar:hover {
   background-color: #22a6b3;
   color: #fff;
   box-shadow: 0 8px 20px rgba(34,166,179,0.4);
@@ -133,7 +133,11 @@ select#dia {
   box-shadow: 0 8px 20px rgba(214, 48, 49, 0.5);
   transform: scale(1.1);
 }
-/* Responsividade para tablets e celulares */
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -162,7 +166,7 @@ select#dia {
   }
 
   .estacionamento {
-    flex-direction: column; /* Estacionamento em coluna */
+    flex-direction: column; /* Muda para coluna */
     gap: 15px;
     padding-bottom: 20px;
   }
@@ -204,4 +208,3 @@ select#dia {
     padding: 6px 10px;
   }
 }
-
