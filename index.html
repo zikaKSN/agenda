@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento de Bicicletário</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Agendamento de Estacionamento de Bicicletas 🚲</h1>
+
+    <div class="selecao-dia">
+      <label for="dia"><strong>Escolha o dia da semana:</strong></label>
+      <select id="dia">
+        <option value="Segunda">Segunda-feira</option>
+        <option value="Terça">Terça-feira</option>
+        <option value="Quarta">Quarta-feira</option>
+        <option value="Quinta">Quinta-feira</option>
+        <option value="Sexta">Sexta-feira</option>
+      </select>
+    </div>
+
+    <div id="lista-estacionamentos">
+      <!-- Estacionamentos e horários serão gerados dinamicamente via JS -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<label for="nome">Seu nome:</label>
+<input type="text" id="nome" placeholder="Digite seu nome" />
+
+<button onclick="fazerReserva()">Agendar</button>

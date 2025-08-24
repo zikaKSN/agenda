@@ -1,0 +1,207 @@
+/* Reset básico e base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  background: #ffffffcc;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+  user-select: none;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #34495e;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+  letter-spacing: 1.5px;
+}
+
+/* Label e select para escolher o dia */
+label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-right: 10px;
+}
+
+select#dia {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 2px solid #2980b9;
+  background-color: #ecf6fc;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline-offset: 3px;
+  outline-color: #3498db;
+}
+
+select#dia:hover, select#dia:focus {
+  border-color: #3498db;
+  background-color: #d0e9fb;
+}
+
+/* Espaçamento após o select */
+select#dia {
+  margin-bottom: 40px;
+  display: block;
+}
+
+/* Estacionamento linha */
+.estacionamento {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 35px;
+  border-bottom: 1.5px solid #d0d7de;
+  padding-bottom: 25px;
+}
+
+/* Nome do estacionamento */
+.nome-estacionamento {
+  width: 220px;
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  padding-top: 12px;
+  user-select: text;
+}
+
+/* Container dos horários */
+.horarios {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Cada bloco de horário */
+.horario {
+  background-color: #dff9fb;
+  border: 2px solid #22a6b3;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #22a6b3;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(34,166,179,0.2);
+  user-select: none;
+  transition: all 0.25s ease-in-out;
+  min-width: 72px;
+  text-align: center;
+}
+
+.horario:hover {
+  background-color: #22a6b3;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(34,166,179,0.4);
+  transform: scale(1.1);
+}
+
+/* Horário reservado */
+.reservado {
+  background-color: #fab1a0;
+  border-color: #d63031;
+  color: #d63031;
+  box-shadow: 0 4px 15px rgba(214, 48, 49, 0.3);
+  cursor: pointer;
+}
+
+.reservado:hover {
+  background-color: #d63031;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(214, 48, 49, 0.5);
+  transform: scale(1.1);
+}
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    align-items: stretch;
+  }
+
+  .container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  select#dia {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .estacionamento {
+    flex-direction: column; /* Estacionamento em coluna */
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+
+  .nome-estacionamento {
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .horarios {
+    justify-content: center;
+  }
+
+  .horario, .botao-reservar {
+    min-width: 65px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .nome-estacionamento {
+    font-size: 1rem;
+  }
+
+  .horario, .botao-reservar {
+    min-width: 55px;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
