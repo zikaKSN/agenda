@@ -1,23 +1,33 @@
-document.getElementById('agendamentoForm').addEventListener('submit', function(e) {
-  e.preventDefault();
+document.getElementById('agendamentoForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-  const nome = document.getElementById('nome').value.trim();
-  const horario = document.getElementById('horario').value;
+    const nome = document.getElementById('nome').value.trim();
+    const serie = document.getElementById('serie').value.trim();
+    const data = document.getElementById('data').value;
+    const entrada = document.getElementById('entrada').value;
+    const saida = document.getElementById('saida').value;
 
-  if (nome && horario) {
+    // Validação simples
+    if (!nome || !serie || !data || !entrada || !saida) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    if (entrada >= saida) {
+        alert("Horário de entrada deve ser antes do horário de saída.");
+        return;
+    }
+
     const lista = document.getElementById('listaAgendamentos');
 
     const item = document.createElement('li');
-    item.innerHTML = `${nome} - ${horario} <button class="cancelar">Cancelar</button>`;
-
-    item.querySelector('.cancelar').addEventListener('click', function() {
-      lista.removeChild(item);
-    });
+    item.innerHTML = `
+        <strong>${nome}</strong> - Série: ${serie}<br>
+        Data: ${data} | Entrada: ${entrada} | Saída: ${saida}
+    `;
 
     lista.appendChild(item);
 
-    // Limpa os campos
-    document.getElementById('nome').value = '';
-    document.getElementById('horario').value = '';
-  }
+    // Limpar formulário
+    document.getElementById('agendamentoForm').reset();
 });
