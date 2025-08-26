@@ -1,79 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #f0f8ff;
-  margin: 0;
-  padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8f5;
+    color: #333;
 }
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  background-color: #fff8dc;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-h1, h2 {
-  color: #2e8b57;
-  text-align: center;
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.form-section, .lista-section {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
 }
 
-label {
-  font-weight: bold;
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-input[type="text"],
-input[type="time"] {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+#listaAgendamentos {
+    list-style: none;
+    padding-left: 0;
 }
 
-li {
-  background-color: #e6ffe6;
-  border: 1px solid #b3ffb3;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cancelar {
-  background-color: #ff4d4d;
-  border: none;
-  padding: 5px 10px;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cancelar:hover {
-  background-color: #e60000;
+#listaAgendamentos li {
+    background-color: #e0f7e9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #4CAF50;
 }
