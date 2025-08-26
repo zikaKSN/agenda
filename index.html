@@ -2,8 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agendamento de Estacionamento de Bicicletas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Agendamento de Bicicleta Escolar</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,26 +17,28 @@
             <h2>Agende seu horário</h2>
             <form id="agendamentoForm">
                 <label for="nome">Nome do Aluno:</label>
-                <input type="text" id="nome" name="nome" required />
+                <input type="text" id="nome" required />
 
                 <label for="serie">Série:</label>
-                <input type="text" id="serie" name="serie" required />
+                <input type="text" id="serie" required />
 
                 <label for="data">Data:</label>
-                <input type="date" id="data" name="data" required />
+                <input type="date" id="data" required />
 
                 <label for="entrada">Horário de Entrada:</label>
-                <input type="time" id="entrada" name="entrada" required />
+                <input type="time" id="entrada" required />
 
                 <label for="saida">Horário de Saída:</label>
-                <input type="time" id="saida" name="saida" required />
+                <input type="time" id="saida" required />
 
-                <button type="submit">Agendar</button>
+                <p id="valorFinal" class="valor">Valor a pagar: R$ 0,00</p>
+                <button type="button" id="calcularBtn">Calcular Valor</button>
+                <button type="button" id="confirmarPagamentoBtn" disabled>Confirmar Pagamento e Agendar</button>
             </form>
         </section>
 
         <section class="lista-section">
-            <h2>Agendamentos</h2>
+            <h2>Agendamentos Confirmados</h2>
             <ul id="listaAgendamentos"></ul>
         </section>
     </main>
